@@ -1,33 +1,35 @@
 # Introducción Práctica a Go
-Fundamentos y primeros pasos en el lenguaje
+Fundamentos y Primeros Pasos en el Lenguaje
 15 Dec 2025
 Tags: go, fundamentos, introductorio
 
-Carlos Moreno
+Carlos Moreno  
 Ingeniero DevOps – Wompi
 
+## Contenido de la Sesión
 
-## Capitulo 1: Instalacion  e Inico en GO
+<div style="display:flex; align-items:center; justify-content:space-between; margin-top:32px; gap:40px;">
 
-Algo de texto.
+  <div style="flex:1; background:#f7f7f7; padding:28px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
 
-### Estilos (lista no enumerada)
+  <h3 style="margin-top:0;">🧠 Fundamentos que aprenderás</h3>
 
-- **Negrita**
-- `Robótico`
-- _Itálica_
-- // un comentario
-- : notas para el presentador
+  <ul style="font-size:22px; line-height:1.8;">
+    <li>🚀 Instalación y uso de Go</li>
+    <li>✍️ Sintaxis básica</li>
+    <li>🔁 Control de flujo</li>
+    <li>🧷 Apuntadores</li>
+    <li>🧩 Funciones</li>
+    <li>📦 Paquetes y módulos</li>
+  </ul>
 
-## Título de la segunda diapositiva
+  </div>
 
-### Segunda sección 
+  <div>
+    <img src="src/images/portada-gopher.png" width="220" style="filter: drop-shadow(0px 10px 18px rgba(0,0,0,0.25));">
+  </div>
 
-#### Sub-sección (lista enumerada)
+</div>
 
-Algo más de texto.
-
-	1. Primer elemento.
-	2. Segundo elemento.
-
-[Un enlace](https://friendsofgo.tech/)
+// Nota para el presentador:
+: Este slide define expectativas. Transmite que la sesión es práctica.
