@@ -1,0 +1,30 @@
+# Introducción práctica a Go: fundamentos y primeros pasos en el lenguaje
+
+Carlos Moreno
+15 december 2025
+
+
+## Título de la primera diapositiva
+
+Algo de texto.
+
+### Estilos (lista no enumerada)
+
+- **Negrita**
+- `Robótico`
+- _Itálica_
+- // un comentario
+- : notas para el presentador
+
+## Título de la segunda diapositiva
+
+### Segunda sección 
+
+#### Sub-sección (lista enumerada)
+
+Algo más de texto.
+
+	1. Primer elemento.
+	2. Segundo elemento.
+
+[Un enlace](https://friendsofgo.tech/)
