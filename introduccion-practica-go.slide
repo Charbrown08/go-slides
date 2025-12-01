@@ -33,3 +33,81 @@ Ingeniero DevOps – Wompi
 
 // Nota para el presentador:
 : Este slide define expectativas. Transmite que la sesión es práctica.
+
+---
+
+## Comandos Básicos de Go
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:20px;">
+
+<div style="background:#f0f7ff; padding:18px; border-radius:10px; border-left:4px solid #0066cc;">
+
+<h3 style="margin-top:0; margin-bottom:12px; font-size:20px; color:#0066cc;">📦 Gestión de Módulos</h3>
+
+<pre style="background:#fff; padding:12px; border-radius:6px; font-size:15px; margin:0 0 10px 0; overflow-x:auto;"><code>go mod init &lt;nombre&gt;
+go mod tidy
+go mod download</code></pre>
+
+<p style="font-size:13px; margin:0; line-height:1.5;">
+<strong>init:</strong> Inicializa módulo<br>
+<strong>tidy:</strong> Limpia dependencias<br>
+<strong>download:</strong> Descarga módulos
+</p>
+
+</div>
+
+<div style="background:#f0fff4; padding:18px; border-radius:10px; border-left:4px solid #28a745;">
+
+<h3 style="margin-top:0; margin-bottom:12px; font-size:20px; color:#28a745;">▶️ Ejecución y Compilación</h3>
+
+<pre style="background:#fff; padding:12px; border-radius:6px; font-size:15px; margin:0 0 10px 0; overflow-x:auto;"><code>go run main.go
+go build
+go install</code></pre>
+
+<p style="font-size:13px; margin:0; line-height:1.5;">
+<strong>run:</strong> Compila y ejecuta<br>
+<strong>build:</strong> Compila programa<br>
+<strong>install:</strong> Instala binario
+</p>
+
+</div>
+
+<div style="background:#fff8f0; padding:18px; border-radius:10px; border-left:4px solid #ff9800;">
+
+<h3 style="margin-top:0; margin-bottom:12px; font-size:20px; color:#ff9800;">🧪 Testing y Formato</h3>
+
+<pre style="background:#fff; padding:12px; border-radius:6px; font-size:15px; margin:0 0 10px 0; overflow-x:auto;"><code>go test
+go test -v
+go fmt ./...
+go vet ./...</code></pre>
+
+<p style="font-size:13px; margin:0; line-height:1.5;">
+<strong>test:</strong> Ejecuta tests<br>
+<strong>fmt:</strong> Formatea código<br>
+<strong>vet:</strong> Detecta errores
+</p>
+
+</div>
+
+<div style="background:#faf0ff; padding:18px; border-radius:10px; border-left:4px solid #9c27b0;">
+
+<h3 style="margin-top:0; margin-bottom:12px; font-size:20px; color:#9c27b0;">📚 Información y Dependencias</h3>
+
+<pre style="background:#fff; padding:12px; border-radius:6px; font-size:15px; margin:0 0 10px 0; overflow-x:auto;"><code>go version
+go env
+go get &lt;paquete&gt;
+go list -m all</code></pre>
+
+<p style="font-size:13px; margin:0; line-height:1.5;">
+<strong>version:</strong> Versión de Go<br>
+<strong>env:</strong> Variables entorno<br>
+<strong>get:</strong> Agrega dependencia
+</p>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Demuestra cada comando con ejemplos prácticos. Enfatiza go mod init y go run como los más usados al inicio.
+
