@@ -282,64 +282,65 @@ la salida debajo del editor.
 
 ---
 
-## 2.1 Variables y Tipos
+## 2.1 Variables
 
 <div style="position:relative; margin-top:20px;">
 <div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
 Capítulo 2 • Slide 2.1
 </div>
 
-<div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:24px; margin-top:10px;">
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:10px;">
 
-<div style="background:#f8f9fa; padding:24px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
+<div style="background:#f8f9fa; padding:20px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
 
-<h3 style="margin-top:0; color:#f5576c; font-size:22px; font-weight:600; margin-bottom:16px;">📝 Declaración de Variables</h3>
+<h3 style="margin-top:0; color:#f5576c; font-size:20px; font-weight:600; margin-bottom:14px;">📝 ¿Qué es una Variable?</h3>
 
-<pre style="background:#1e1e1e; padding:16px; border-radius:8px; font-size:15px; margin:0 0 16px 0; overflow-x:auto; border:1px solid #333; box-shadow:0 2px 8px rgba(0,0,0,0.1);"><code style="color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace;"><span style="color:#569cd6;">var</span> <span style="color:#4ec9b0;">nombre</span> <span style="color:#4ec9b0;">string</span> = <span style="color:#ce9178;">"Wompi"</span>
+<p style="font-size:14px; line-height:1.6; color:#2d3436; margin-bottom:14px;">
+Una <strong style="color:#f5576c;">variable</strong> es un espacio en memoria que almacena un valor que puede cambiar durante la ejecución del programa.
+</p>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #f093fb;">
+<p style="margin:0 0 6px 0; font-size:14px; color:#555;">
+<strong style="color:#f5576c;">Características:</strong>
+</p>
+<ul style="margin:0; padding-left:20px; font-size:13px; color:#666; line-height:1.6;">
+  <li>Almacena datos temporales</li>
+  <li>Tiene un nombre (identificador)</li>
+  <li>Tiene un tipo de dato</li>
+  <li>Puede cambiar su valor</li>
+</ul>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:20px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:20px; font-weight:600; margin-bottom:14px;">🔧 Declaración e Inicialización</h3>
+
+<div style="background:#1e1e1e; padding:14px; border-radius:8px; margin-bottom:12px; border:1px solid #333;">
+<pre style="margin:0; font-size:12px; line-height:1.5; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace; overflow-x:auto;"><code><span style="color:#6a9955;">// 1. Declaración explícita</span>
+<span style="color:#569cd6;">var</span> <span style="color:#4ec9b0;">nombre</span> <span style="color:#4ec9b0;">string</span>
+<span style="color:#4ec9b0;">nombre</span> = <span style="color:#ce9178;">"Wompi"</span>
+
+<span style="color:#6a9955;">// 2. Con inicialización</span>
 <span style="color:#569cd6;">var</span> <span style="color:#4ec9b0;">edad</span> <span style="color:#4ec9b0;">int</span> = <span style="color:#b5cea8;">25</span>
 
-<span style="color:#6a9955;">// Declaración corta (inferencia de tipo)</span>
+<span style="color:#6a9955;">// 3. Declaración corta</span>
 <span style="color:#4ec9b0;">ciudad</span> := <span style="color:#ce9178;">"Bogotá"</span>
-<span style="color:#4ec9b0;">salario</span> := <span style="color:#b5cea8;">5000.50</span></code></pre>
+<span style="color:#4ec9b0;">salario</span> := <span style="color:#b5cea8;">5000.50</span>
 
-<div style="background:#fff3cd; padding:14px; border-radius:8px; border-left:3px solid #ffc107; margin-top:12px;">
-<p style="margin:0; font-size:14px; color:#856404;">
-<strong>💡 Tip:</strong> Usa <code style="background:#fff; padding:2px 6px; border-radius:4px;">:=</code> para declaración corta dentro de funciones
+<span style="color:#6a9955;">// 4. Declaración múltiple</span>
+<span style="color:#569cd6;">var</span> (
+    <span style="color:#4ec9b0;">x</span> <span style="color:#4ec9b0;">int</span> = <span style="color:#b5cea8;">10</span>
+    <span style="color:#4ec9b0;">y</span> <span style="color:#4ec9b0;">string</span> = <span style="color:#ce9178;">"Hola"</span>
+)</code></pre>
+</div>
+
+<div style="background:#e8f5e9; padding:10px; border-radius:8px; border-left:3px solid #4caf50;">
+<p style="margin:0; font-size:12px; color:#2e7d32;">
+<strong>💡 Tip:</strong> Usa <code style="background:#fff; padding:2px 4px; border-radius:4px; color:#d63384; font-size:11px;">:=</code> dentro de funciones
 </p>
 </div>
-
-</div>
-
-<div style="background:#f8f9fa; padding:24px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
-
-<h3 style="margin-top:0; color:#f5576c; font-size:22px; font-weight:600; margin-bottom:16px;">🔢 Tipos Básicos</h3>
-
-<ul style="font-size:16px; line-height:2; color:#2d3436; padding-left:24px; list-style:none; margin:0;">
-  <li style="margin:10px 0; padding-left:8px; border-left:3px solid #f5576c;">
-    <strong style="color:#f5576c;">string</strong><br>
-    <span style="color:#666; font-size:14px;">Cadenas de texto</span>
-  </li>
-  
-  <li style="margin:10px 0; padding-left:8px; border-left:3px solid #f5576c;">
-    <strong style="color:#f5576c;">int, int8, int16, int32, int64</strong><br>
-    <span style="color:#666; font-size:14px;">Números enteros</span>
-  </li>
-  
-  <li style="margin:10px 0; padding-left:8px; border-left:3px solid #f5576c;">
-    <strong style="color:#f5576c;">float32, float64</strong><br>
-    <span style="color:#666; font-size:14px;">Números decimales</span>
-  </li>
-  
-  <li style="margin:10px 0; padding-left:8px; border-left:3px solid #f5576c;">
-    <strong style="color:#f5576c;">bool</strong><br>
-    <span style="color:#666; font-size:14px;">Verdadero o falso</span>
-  </li>
-  
-  <li style="margin:10px 0; padding-left:8px; border-left:3px solid #f5576c;">
-    <strong style="color:#f5576c;">byte, rune</strong><br>
-    <span style="color:#666; font-size:14px;">Caracteres</span>
-  </li>
-</ul>
 
 </div>
 
@@ -348,5 +349,618 @@ Capítulo 2 • Slide 2.1
 </div>
 
 // Nota para el presentador:
-: Explica la diferencia entre `var` y `:=`. Muestra ejemplos de cada tipo básico. Enfatiza que Go es tipado estático.
+: Explica qué es una variable y las diferentes formas de declararla. Enfatiza la diferencia entre `var` y `:=`. Muestra ejemplos prácticos.
 
+---
+
+## 2.2 Tipos Básicos
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.2
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; margin-top:10px;">
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">✓ bool</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">activo := true</code>
+
+</div>
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">📝 string</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">nombre := "Wompi"</code>
+
+</div>
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔢 int</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">edad := 25</code>
+<div style="font-size:11px; color:#666; margin-top:6px;">int8, int16, int32, int64</div>
+
+</div>
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔢 uint</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">contador := uint(100)</code>
+<div style="font-size:11px; color:#666; margin-top:6px;">uint8, uint16, uint32, uint64</div>
+
+</div>
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔢 float</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">precio := 99.99</code>
+<div style="font-size:11px; color:#666; margin-top:6px;">float32, float64</div>
+
+</div>
+
+<div style="background:#fff5f5; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔤 byte, rune</h3>
+<code style="background:#f5f5f5; padding:3px 6px; border-radius:3px; font-size:12px; color:#d63384;">var char rune = '🚀'</code>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Explica cada tipo con detalle. Enfatiza que `int` y `uint` dependen de la plataforma. Muestra los rangos de valores cuando sea relevante.
+
+---
+
+## 2.3 Constantes
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.3
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:10px;">
+
+<div style="background:#f8f9fa; padding:20px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:20px; font-weight:600; margin-bottom:14px;">📝 ¿Qué es una Constante?</h3>
+
+<p style="font-size:14px; line-height:1.6; color:#2d3436; margin-bottom:16px;">
+Una <strong style="color:#f5576c;">constante</strong> es un valor que <strong>no puede cambiar</strong> durante la ejecución del programa.
+</p>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #f093fb;">
+<p style="margin:0 0 6px 0; font-size:14px; color:#555;">
+<strong style="color:#f5576c;">Características:</strong>
+</p>
+<ul style="margin:0; padding-left:20px; font-size:13px; color:#666; line-height:1.6;">
+  <li>Valor inmutable</li>
+  <li>Se declara con <code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px;">const</code></li>
+  <li>Debe inicializarse al declarar</li>
+  <li>Puede ser tipada o sin tipo</li>
+</ul>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:20px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:20px; font-weight:600; margin-bottom:14px;">🔧 Declaración</h3>
+
+<div style="background:#1e1e1e; padding:16px; border-radius:8px; margin-bottom:12px; border:1px solid #333;">
+<pre style="margin:0; font-size:13px; line-height:1.5; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace; overflow-x:auto;"><code><span style="color:#6a9955;">// Constante simple</span>
+<span style="color:#569cd6;">const</span> <span style="color:#4ec9b0;">PI</span> = <span style="color:#b5cea8;">3.14159</span>
+
+<span style="color:#6a9955;">// Constante tipada</span>
+<span style="color:#569cd6;">const</span> <span style="color:#4ec9b0;">Nombre</span> <span style="color:#4ec9b0;">string</span> = <span style="color:#ce9178;">"Wompi"</span>
+
+<span style="color:#6a9955;">// Múltiples constantes</span>
+<span style="color:#569cd6;">const</span> (
+    <span style="color:#4ec9b0;">StatusOK</span> = <span style="color:#b5cea8;">200</span>
+    <span style="color:#4ec9b0;">StatusError</span> = <span style="color:#b5cea8;">500</span>
+)
+
+<span style="color:#6a9955;">// iota (generador automático)</span>
+<span style="color:#569cd6;">const</span> (
+    <span style="color:#4ec9b0;">Lunes</span> = <span style="color:#4ec9b0;">iota</span> <span style="color:#6a9955;">// 0</span>
+    <span style="color:#4ec9b0;">Martes</span> <span style="color:#6a9955;">// 1</span>
+    <span style="color:#4ec9b0;">Miércoles</span> <span style="color:#6a9955;">// 2</span>
+)</code></pre>
+</div>
+
+<div style="background:#e8f5e9; padding:10px; border-radius:8px; border-left:3px solid #4caf50;">
+<p style="margin:0; font-size:12px; color:#2e7d32;">
+<strong>💡 Tip:</strong> <code style="background:#fff; padding:2px 4px; border-radius:4px; color:#d63384; font-size:11px;">iota</code> genera valores secuenciales automáticamente
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Explica la diferencia entre constantes y variables. Muestra el uso de `iota` que es único de Go. Enfatiza que las constantes son inmutables.
+
+---
+
+## 2.4 Conversiones Explícitas de Tipos
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.4
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:10px;">
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:18px; font-weight:600; margin-bottom:10px;">🔄 Conversiones</h3>
+
+<p style="font-size:13px; line-height:1.5; color:#2d3436; margin-bottom:12px;">
+En Go las conversiones son <strong style="color:#f5576c;">explícitas</strong>. No hay conversiones automáticas.
+</p>
+
+<div style="background:#fff; padding:10px; border-radius:8px; border:2px solid #f093fb; margin-bottom:10px;">
+<p style="margin:0; font-size:12px; color:#555;">
+<strong style="color:#f5576c;">Sintaxis:</strong> <code style="background:#f5f5f5; padding:2px 4px; border-radius:3px; font-size:11px; color:#d63384;">TipoDestino(valor)</code>
+</p>
+</div>
+
+<div style="background:#fff3cd; padding:8px; border-radius:6px; border-left:3px solid #ffc107;">
+<p style="margin:0; font-size:11px; color:#856404;">
+<strong>⚠️</strong> Siempre debes convertir explícitamente
+</p>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:18px; font-weight:600; margin-bottom:10px;">💻 Ejemplos</h3>
+
+<div style="background:#1e1e1e; padding:12px; border-radius:8px; margin-bottom:10px; border:1px solid #333;">
+<pre style="margin:0; font-size:11px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace; overflow-x:auto;"><code><span style="color:#6a9955;">// int a float64</span>
+<span style="color:#4ec9b0;">y</span> := <span style="color:#4ec9b0;">float64</span>(<span style="color:#b5cea8;">42</span>)
+
+<span style="color:#6a9955;">// float64 a int</span>
+<span style="color:#4ec9b0;">entero</span> := <span style="color:#4ec9b0;">int</span>(<span style="color:#b5cea8;">99.99</span>) <span style="color:#6a9955;">// 99</span>
+
+<span style="color:#6a9955;">// string a []byte</span>
+<span style="color:#4ec9b0;">bytes</span> := []<span style="color:#4ec9b0;">byte</span>(<span style="color:#ce9178;">"Wompi"</span>)
+
+<span style="color:#6a9955;">// []byte a string</span>
+<span style="color:#4ec9b0;">str</span> := <span style="color:#4ec9b0;">string</span>([]<span style="color:#4ec9b0;">byte</span>{<span style="color:#b5cea8;">87</span>, <span style="color:#b5cea8;">111</span>})</code></pre>
+</div>
+
+<div style="background:#e8f5e9; padding:8px; border-radius:6px; border-left:3px solid #4caf50;">
+<p style="margin:0; font-size:11px; color:#2e7d32;">
+<strong>💡</strong> Pueden perder información (float→int trunca)
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Enfatiza que Go requiere conversiones explícitas. Muestra ejemplos prácticos y advierte sobre pérdida de información en algunas conversiones.
+
+---
+
+## 2.5 Operadores Numéricos
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.5
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:10px;">
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">➕ Aritméticos</h3>
+
+<div style="background:#fff; padding:8px; border-radius:6px; margin-bottom:8px; border:1px solid #e0e0e0; font-size:11px; line-height:1.6;">
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">+</code> Suma | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">-</code> Resta | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">*</code> Multiplicación<br>
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">/</code> División | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">%</code> Módulo
+</div>
+
+<div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace;"><code><span style="color:#4ec9b0;">a</span> := <span style="color:#b5cea8;">10</span> + <span style="color:#b5cea8;">5</span>  <span style="color:#6a9955;">// 15</span>
+<span style="color:#4ec9b0;">b</span> := <span style="color:#b5cea8;">10</span> / <span style="color:#b5cea8;">3</span>  <span style="color:#6a9955;">// 3</span>
+<span style="color:#4ec9b0;">c</span> := <span style="color:#b5cea8;">10</span> % <span style="color:#b5cea8;">3</span>  <span style="color:#6a9955;">// 1</span></code></pre>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔀 Comparación</h3>
+
+<div style="background:#fff; padding:8px; border-radius:6px; margin-bottom:8px; border:1px solid #e0e0e0; font-size:11px; line-height:1.6;">
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">==</code> Igual | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">!=</code> Diferente<br>
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">&lt;</code> Menor | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">&lt;=</code> Menor igual<br>
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">&gt;</code> Mayor | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">&gt;=</code> Mayor igual
+</div>
+
+<div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace;"><code><span style="color:#4ec9b0;">x</span> := <span style="color:#b5cea8;">10</span> == <span style="color:#b5cea8;">10</span>  <span style="color:#6a9955;">// true</span>
+<span style="color:#4ec9b0;">y</span> := <span style="color:#b5cea8;">5</span> &lt; <span style="color:#b5cea8;">10</span>   <span style="color:#6a9955;">// true</span></code></pre>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">⚡ Asignación</h3>
+
+<div style="background:#fff; padding:8px; border-radius:6px; margin-bottom:8px; border:1px solid #e0e0e0; font-size:11px; line-height:1.6;">
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">=</code> Asignación | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">+=</code> Suma<br>
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">-=</code> Resta | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">*=</code> Multiplica<br>
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">/=</code> Divide | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">%=</code> Módulo
+</div>
+
+<div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace;"><code><span style="color:#4ec9b0;">x</span> := <span style="color:#b5cea8;">10</span>
+<span style="color:#4ec9b0;">x</span> += <span style="color:#b5cea8;">5</span>  <span style="color:#6a9955;">// 15</span>
+<span style="color:#4ec9b0;">x</span> *= <span style="color:#b5cea8;">2</span>  <span style="color:#6a9955;">// 30</span></code></pre>
+</div>
+
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:16px; font-weight:600; margin-bottom:10px;">🔢 Incremento/Decremento</h3>
+
+<div style="background:#fff; padding:8px; border-radius:6px; margin-bottom:8px; border:1px solid #e0e0e0; font-size:11px; line-height:1.6;">
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">++</code> Incremento | 
+<code style="background:#f5f5f5; padding:1px 3px; border-radius:3px; font-size:11px; color:#d63384;">--</code> Decremento
+</div>
+
+<div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', 'Courier New', monospace;"><code><span style="color:#4ec9b0;">x</span> := <span style="color:#b5cea8;">10</span>
+<span style="color:#4ec9b0;">x</span>++  <span style="color:#6a9955;">// 11</span>
+<span style="color:#4ec9b0;">x</span>--  <span style="color:#6a9955;">// 10</span></code></pre>
+</div>
+
+<div style="background:#fff3cd; padding:6px; border-radius:6px; margin-top:6px; border-left:3px solid #ffc107;">
+<p style="margin:0; font-size:10px; color:#856404;">
+<strong>⚠️</strong> Solo como statement: <code style="background:#fff; padding:1px 2px; border-radius:3px; font-size:9px;">x++</code> ✓ | <code style="background:#fff; padding:1px 2px; border-radius:3px; font-size:9px;">y = x++</code> ✗
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Muestra ejemplos prácticos de cada operador. Enfatiza que ++ y -- solo pueden usarse como statements, no en expresiones.
+
+---
+
+## 2.6 Reto: Operadores Numéricos
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.6
+</div>
+
+<div style="background:#f8f9fa; padding:20px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:20px; font-weight:600; margin-bottom:16px; text-align:center;">🎯 Reto: Calcula el Valor de la Expresión</h3>
+
+<p style="font-size:14px; line-height:1.7; color:#2d3436; margin-bottom:18px; text-align:center;">
+Calcula el valor de esta expresión usando los operadores numéricos. <strong style="color:#f5576c;">¡Recuerda el orden de operaciones!</strong>
+</p>
+
+<div style="background:#fff; padding:20px; border-radius:10px; border:2px solid #f093fb; margin-bottom:16px; text-align:center;">
+<code style="background:#1e1e1e; color:#d4d4d4; padding:12px 20px; border-radius:8px; display:inline-block; font-size:15px; font-family:'Monaco', monospace;">a := (8 + 3) * (3 % 5) - 2 * (4 + 1)</code>
+</div>
+
+<div style="background:#e8f5e9; padding:14px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:12px;">
+<p style="margin:0 0 8px 0; font-size:14px; color:#2e7d32; font-weight:600;">📋 Orden de Operaciones:</p>
+<ol style="margin:0; padding-left:24px; font-size:13px; color:#2d3436; line-height:1.8;">
+  <li><strong>Paréntesis</strong> <code style="background:#fff; padding:2px 4px; border-radius:3px; font-size:11px;">()</code> (de adentro hacia afuera)</li>
+  <li>Multiplicación, División, Módulo <code style="background:#fff; padding:2px 4px; border-radius:3px; font-size:11px;">* / %</code> (izquierda a derecha)</li>
+  <li>Suma y Resta <code style="background:#fff; padding:2px 4px; border-radius:3px; font-size:11px;">+ -</code> (izquierda a derecha)</li>
+</ol>
+</div>
+
+<div style="background:#fff3cd; padding:12px; border-radius:8px; border-left:3px solid #ffc107;">
+<p style="margin:0; font-size:13px; color:#856404;">
+<strong>💡 Pista:</strong> Resuelve primero todos los paréntesis, luego las multiplicaciones, y finalmente las sumas y restas.
+</p>
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Explica el reto detalladamente. Asegúrate de que todos entiendan cada paso antes de pasar al siguiente slide con el código.
+
+---
+
+## 2.7 Implementa el Reto
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.7
+</div>
+
+<div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:16px; margin-top:10px;">
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:18px; font-weight:600; margin-bottom:12px;">💻 Tu Código</h3>
+
+.play -edit reto-operadores.go
+
+</div>
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #f5576c; box-shadow:0 2px 8px rgba(245, 87, 108, 0.15);">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:18px; font-weight:600; margin-bottom:12px;">✅ Solución</h3>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #4caf50;">
+<p style="margin:0 0 8px 0; font-size:13px; color:#2e7d32; font-weight:600;">
+Resultado esperado:
+</p>
+<p style="margin:0 0 10px 0; font-size:13px; color:#2d3436;">
+<code style="background:#f5f5f5; padding:4px 8px; border-radius:4px; font-size:12px;">(8 + 3) * (3 % 5) - 2 * (4 + 1) = <strong style="color:#f5576c;">23</strong></code>
+</p>
+<div style="background:#e8f5e9; padding:10px; border-radius:6px; border-left:3px solid #4caf50;">
+<p style="margin:0; font-size:11px; color:#2e7d32; line-height:1.6;">
+<strong>💡 Pasos:</strong><br>
+1. (8 + 3) = <strong>11</strong><br>
+2. (3 % 5) = <strong>3</strong><br>
+3. (4 + 1) = <strong>5</strong><br>
+4. 11 * 3 = <strong>33</strong><br>
+5. 2 * 5 = <strong>10</strong><br>
+6. 33 - 10 = <strong style="color:#f5576c;">23</strong>
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Deja que los estudiantes implementen el código. Luego revisa la solución paso a paso y explica cada operación.
+
+---
+
+## 2.8 Operadores Lógicos
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(245, 87, 108, 0.3);">
+Capítulo 2 • Slide 2.8
+</div>
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #f093fb; box-shadow:0 2px 8px rgba(240, 147, 251, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#f5576c; font-size:18px; font-weight:600; margin-bottom:12px;">🔗 Operadores Lógicos con Booleanos</h3>
+
+<p style="font-size:13px; line-height:1.5; color:#2d3436; margin-bottom:14px;">
+Operadores que trabajan con <code style="background:#fff; padding:2px 5px; border-radius:3px; font-size:11px; color:#d63384;">bool</code> y devuelven un resultado booleano.
+</p>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+
+<div style="background:#fff; padding:10px; border-radius:8px; border:2px solid #f093fb; box-shadow:0 2px 4px rgba(240, 147, 251, 0.1);">
+
+<h4 style="margin-top:0; color:#f5576c; font-size:14px; font-weight:600; margin-bottom:6px;">&& AND</h4>
+
+<p style="margin:0 0 6px 0; font-size:11px; color:#666; line-height:1.4;">
+Ambas condiciones deben ser <code style="background:#f5f5f5; padding:1px 3px; border-radius:2px; font-size:10px;">true</code>
+</p>
+
+<div style="background:#1e1e1e; padding:6px; border-radius:4px; border:1px solid #333;">
+<pre style="margin:0; font-size:9px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">a</span> := <span style="color:#b5cea8;">true</span> && <span style="color:#b5cea8;">true</span>  <span style="color:#6a9955;">// true</span>
+<span style="color:#4ec9b0;">b</span> := <span style="color:#b5cea8;">true</span> && <span style="color:#b5cea8;">false</span> <span style="color:#6a9955;">// false</span></code></pre>
+</div>
+
+</div>
+
+<div style="background:#fff; padding:10px; border-radius:8px; border:2px solid #f5576c; box-shadow:0 2px 4px rgba(245, 87, 108, 0.1);">
+
+<h4 style="margin-top:0; color:#f5576c; font-size:14px; font-weight:600; margin-bottom:6px;">|| OR</h4>
+
+<p style="margin:0 0 6px 0; font-size:11px; color:#666; line-height:1.4;">
+Al menos una condición debe ser <code style="background:#f5f5f5; padding:1px 3px; border-radius:2px; font-size:10px;">true</code>
+</p>
+
+<div style="background:#1e1e1e; padding:6px; border-radius:4px; border:1px solid #333;">
+<pre style="margin:0; font-size:9px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">a</span> := <span style="color:#b5cea8;">true</span> || <span style="color:#b5cea8;">false</span>  <span style="color:#6a9955;">// true</span>
+<span style="color:#4ec9b0;">b</span> := <span style="color:#b5cea8;">false</span> || <span style="color:#b5cea8;">false</span> <span style="color:#6a9955;">// false</span></code></pre>
+</div>
+
+</div>
+
+<div style="background:#fff; padding:10px; border-radius:8px; border:2px solid #4caf50; box-shadow:0 2px 4px rgba(76, 175, 80, 0.1);">
+
+<h4 style="margin-top:0; color:#4caf50; font-size:14px; font-weight:600; margin-bottom:6px;">! NOT</h4>
+
+<p style="margin:0 0 6px 0; font-size:11px; color:#666; line-height:1.4;">
+Invierte el valor booleano
+</p>
+
+<div style="background:#1e1e1e; padding:6px; border-radius:4px; border:1px solid #333;">
+<pre style="margin:0; font-size:9px; line-height:1.3; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">a</span> := !<span style="color:#b5cea8;">true</span>   <span style="color:#6a9955;">// false</span>
+<span style="color:#4ec9b0;">b</span> := !<span style="color:#b5cea8;">false</span>  <span style="color:#6a9955;">// true</span></code></pre>
+</div>
+
+</div>
+
+</div>
+
+<div style="background:#e8f5e9; padding:10px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:10px;">
+<p style="margin:0 0 6px 0; font-size:12px; color:#2e7d32; font-weight:600;">💡 Ejemplos:</p>
+<div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">edad</span> := <span style="color:#b5cea8;">25</span>; <span style="color:#4ec9b0;">activo</span> := <span style="color:#b5cea8;">true</span>
+<span style="color:#4ec9b0;">valido</span> := <span style="color:#4ec9b0;">edad</span> &gt;= <span style="color:#b5cea8;">18</span> && <span style="color:#4ec9b0;">activo</span>  <span style="color:#6a9955;">// true</span>
+<span style="color:#4ec9b0;">puedeAcceder</span> := <span style="color:#4ec9b0;">esPremium</span> || <span style="color:#4ec9b0;">esAdmin</span>
+<span style="color:#4ec9b0;">noActivo</span> := !<span style="color:#4ec9b0;">activo</span>  <span style="color:#6a9955;">// false</span></code></pre>
+</div>
+</div>
+
+<div style="background:#fff3cd; padding:10px; border-radius:8px; border-left:3px solid #ffc107;">
+<p style="margin:0; font-size:11px; color:#856404; line-height:1.4;">
+<strong>⚠️ Cortocircuito:</strong> En <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">&&</code> si el primero es <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">false</code>, no evalúa el segundo. En <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">||</code> si el primero es <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">true</code>, no evalúa el segundo.
+</p>
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Explica cada operador con ejemplos claros. Muestra cómo combinar operadores lógicos con comparaciones. Enfatiza la evaluación de cortocircuito.
+
+---
+
+## Capítulo 3: Control de Flujo
+
+<div style="position:relative; width:100%; height:100%; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius:20px; padding:60px 40px; box-shadow:0 10px 40px rgba(102, 126, 234, 0.3); overflow:hidden;">
+
+<div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:rgba(255,255,255,0.1); border-radius:50%;"></div>
+<div style="position:absolute; bottom:-80px; left:-80px; width:250px; height:250px; background:rgba(255,255,255,0.08); border-radius:50%;"></div>
+
+<div style="position:relative; z-index:1; text-align:center;">
+
+<h1 style="color:#fff; font-size:56px; font-weight:700; margin:0 0 20px 0; text-shadow:0 4px 12px rgba(0,0,0,0.2);">
+Capítulo 3
+</h1>
+
+<h2 style="color:#fff; font-size:42px; font-weight:600; margin:0 0 50px 0; text-shadow:0 2px 8px rgba(0,0,0,0.2);">
+Control de Flujo
+</h2>
+
+<div style="display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-top:40px;">
+
+<div style="background:rgba(255,255,255,0.95); padding:24px 28px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.15); min-width:200px; text-align:center;">
+<p style="margin:0; font-size:32px;">🔀</p>
+<p style="margin:8px 0 0 0; font-size:18px; color:#333; font-weight:600;">if/else</p>
+<p style="margin:4px 0 0 0; font-size:14px; color:#666;">Condicionales</p>
+</div>
+
+<div style="background:rgba(255,255,255,0.95); padding:24px 28px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.15); min-width:200px; text-align:center;">
+<p style="margin:0; font-size:32px;">🔄</p>
+<p style="margin:8px 0 0 0; font-size:18px; color:#333; font-weight:600;">switch</p>
+<p style="margin:4px 0 0 0; font-size:14px; color:#666;">Selección múltiple</p>
+</div>
+
+<div style="background:rgba(255,255,255,0.95); padding:24px 28px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.15); min-width:200px; text-align:center;">
+<p style="margin:0; font-size:32px;">🔁</p>
+<p style="margin:8px 0 0 0; font-size:18px; color:#333; font-weight:600;">for</p>
+<p style="margin:4px 0 0 0; font-size:14px; color:#666;">Bucles</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Este capítulo cubre las estructuras de control de flujo en Go. Asegúrate de explicar las diferencias con otros lenguajes (no hay while, solo for).
+
+---
+
+## 3.1 Condicionales: if/else
+
+<div style="position:relative; margin-top:20px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(102, 126, 234, 0.3);">
+Capítulo 3 • Slide 3.1
+</div>
+
+<div style="background:#f8f9fa; padding:16px; border-radius:12px; border-left:5px solid #667eea; box-shadow:0 2px 8px rgba(102, 126, 234, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#667eea; font-size:18px; font-weight:600; margin-bottom:12px;">🔀 Estructura if/else</h3>
+
+<p style="font-size:13px; line-height:1.5; color:#2d3436; margin-bottom:14px;">
+Permite ejecutar código condicionalmente basado en una expresión booleana.
+</p>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:14px;">
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #667eea; box-shadow:0 2px 4px rgba(102, 126, 234, 0.1);">
+
+<h4 style="margin-top:0; color:#667eea; font-size:14px; font-weight:600; margin-bottom:8px;">Sintaxis Básica</h4>
+
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:11px; line-height:1.5; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">condicion</span> {
+    <span style="color:#6a9955;">// código si es true</span>
+}
+
+<span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">condicion</span> {
+    <span style="color:#6a9955;">// código si es true</span>
+} <span style="color:#569cd6;">else</span> {
+    <span style="color:#6a9955;">// código si es false</span>
+}</code></pre>
+</div>
+
+</div>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #764ba2; box-shadow:0 2px 4px rgba(118, 75, 162, 0.1);">
+
+<h4 style="margin-top:0; color:#764ba2; font-size:14px; font-weight:600; margin-bottom:8px;">Ejemplo Práctico</h4>
+
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:11px; line-height:1.5; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">edad</span> := <span style="color:#b5cea8;">25</span>
+
+<span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">edad</span> &gt;= <span style="color:#b5cea8;">18</span> {
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#ce9178;">"Mayor de edad"</span>)
+} <span style="color:#569cd6;">else</span> {
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#ce9178;">"Menor de edad"</span>)
+}</code></pre>
+</div>
+
+</div>
+
+</div>
+
+<div style="background:#e8f5e9; padding:10px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:10px;">
+<p style="margin:0 0 6px 0; font-size:12px; color:#2e7d32; font-weight:600;">💡 Características:</p>
+<ul style="margin:0; padding-left:20px; font-size:11px; color:#2d3436; line-height:1.6;">
+  <li>No se requieren paréntesis alrededor de la condición</li>
+  <li>Las llaves <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">{}</code> son obligatorias</li>
+  <li>Se puede usar <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">if</code> con declaración corta: <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">if x := f(); x < 10 {}</code></li>
+  <li>Se puede encadenar con <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">else if</code></li>
+</ul>
+</div>
+
+<div style="background:#fff3cd; padding:10px; border-radius:8px; border-left:3px solid #ffc107;">
+<p style="margin:0; font-size:11px; color:#856404; line-height:1.4;">
+<strong>⚠️ Importante:</strong> En Go, las llaves <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:10px;">{}</code> son obligatorias incluso para una sola línea. La condición debe ser una expresión booleana.
+</p>
+</div>
+
+</div>
+
+</div>
+
+// Nota para el presentador:
+: Muestra ejemplos de if simple, if/else, y if con declaración corta. Enfatiza que las llaves son obligatorias y que no se usan paréntesis.
