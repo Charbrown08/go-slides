@@ -1079,10 +1079,13 @@ Go no tiene <code style="background:#fff; padding:1px 3px; border-radius:2px; fo
 </div>
 
 <div style="background:#fff; padding:10px; border-radius:8px; border:2px solid #8e44ad; box-shadow:0 2px 4px rgba(142, 68, 173, 0.1);">
-<h4 style="margin-top:0; color:#8e44ad; font-size:13px; font-weight:600; margin-bottom:6px;">for range</h4>
+<h4 style="margin-top:0; color:#8e44ad; font-size:13px; font-weight:600; margin-bottom:6px;">for infinito</h4>
 <div style="background:#1e1e1e; padding:8px; border-radius:6px; border:1px solid #333;">
-<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span>, <span style="color:#4ec9b0;">valor</span> := <span style="color:#569cd6;">range</span> []<span style="color:#4ec9b0;">string</span>{<span style="color:#ce9178;">"go"</span>, <span style="color:#ce9178;">"dev"</span>} {
-    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Printf</span>(<span style="color:#ce9178;">"%d: %s\n"</span>, <span style="color:#4ec9b0;">i</span>, <span style="color:#4ec9b0;">valor</span>)
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> {
+    <span style="color:#808080;">// Código aquí...</span>
+    <span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">condicion</span> {
+        <span style="color:#569cd6;">break</span>
+    }
 }</code></pre>
 </div>
 </div>
@@ -1093,7 +1096,7 @@ Go no tiene <code style="background:#fff; padding:1px 3px; border-radius:2px; fo
 <p style="margin:0 0 4px 0; font-size:11px; color:#2e7d32; font-weight:600;">💡 Claves:</p>
 <ul style="margin:0; padding-left:18px; font-size:10px; color:#2d3436; line-height:1.5;">
   <li><code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">break</code> para salir; <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">continue</code> para saltar</li>
-  <li><code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">range</code> devuelve índice y valor; usa <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">_</code> si no necesitas uno</li>
+  <li>For infinito: usa <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">for {}</code> con break para salir</li>
   <li>Define condiciones de salida claras</li>
 </ul>
 </div>
@@ -1109,4 +1112,246 @@ Go no tiene <code style="background:#fff; padding:1px 3px; border-radius:2px; fo
 </div>
 
 <!-- Nota para el presentador:
-Muestra las tres variantes de for (clásico, estilo while, range). Enfatiza que es el único bucle y cómo salir o continuar. -->
+Muestra las tres variantes de for (clásico, estilo while, infinito). Enfatiza que es el único bucle y cómo salir o continuar. -->
+---
+
+## 3.3.1 Las tres formas de for con ejemplos prácticos
+
+<div style="position:relative; margin-top:10px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(102, 126, 234, 0.3);">
+Capítulo 3 • Slide 3.3.1
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #667eea; box-shadow:0 2px 8px rgba(102, 126, 234, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#667eea; font-size:17px; font-weight:600; margin-bottom:10px;">♻️ Las tres formas de for en Go</h3>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #667eea; box-shadow:0 2px 4px rgba(102, 126, 234, 0.1);">
+<h4 style="margin-top:0; color:#667eea; font-size:13px; font-weight:600; margin-bottom:8px;">1. For clásico</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span> := <span style="color:#b5cea8;">0</span>; <span style="color:#4ec9b0;">i</span> &lt; <span style="color:#b5cea8;">5</span>; <span style="color:#4ec9b0;">i</span>++ {
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#4ec9b0;">i</span>)
+}</code></pre>
+</div>
+<p style="margin:8px 0 0 0; font-size:10px; color:#666;">Inicialización, condición, incremento</p>
+</div>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #764ba2; box-shadow:0 2px 4px rgba(118, 75, 162, 0.1);">
+<h4 style="margin-top:0; color:#764ba2; font-size:13px; font-weight:600; margin-bottom:8px;">2. For como while</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">contador</span> := <span style="color:#b5cea8;">0</span>
+<span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">contador</span> &lt; <span style="color:#b5cea8;">5</span> {
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#4ec9b0;">contador</span>)
+    <span style="color:#4ec9b0;">contador</span>++
+}</code></pre>
+</div>
+<p style="margin:8px 0 0 0; font-size:10px; color:#666;">Cuando no sabes cuántas iteraciones</p>
+</div>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #8e44ad; box-shadow:0 2px 4px rgba(142, 68, 173, 0.1);">
+<h4 style="margin-top:0; color:#8e44ad; font-size:13px; font-weight:600; margin-bottom:8px;">3. For infinito</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> {
+    <span style="color:#808080;">// Código aquí...</span>
+    <span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">condicion</span> {
+        <span style="color:#569cd6;">break</span>  <span style="color:#808080;">// Salir</span>
+    }
+}</code></pre>
+</div>
+<p style="margin:8px 0 0 0; font-size:10px; color:#666;">Bucle infinito controlado con break</p>
+</div>
+
+</div>
+
+<div style="background:#e8f5e9; padding:8px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:8px;">
+<p style="margin:0 0 4px 0; font-size:11px; color:#2e7d32; font-weight:600;">💡 Clave:</p>
+<ul style="margin:0; padding-left:18px; font-size:10px; color:#2d3436; line-height:1.5;">
+  <li>For clásico: cuando sabes cuántas veces iterar</li>
+  <li>For como while: cuando la condición depende de algo externo</li>
+  <li>For infinito: cuando necesitas un bucle que se detiene con break</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<!-- Nota para el presentador:
+Muestra las tres variantes de for con ejemplos simples. Enfatiza cuándo usar cada una. -->
+---
+
+## 3.3.2 Break y Continue: control de flujo
+
+<div style="position:relative; margin-top:10px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(231, 76, 60, 0.3);">
+Capítulo 3 • Slide 3.3.2
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #e74c3c; box-shadow:0 2px 8px rgba(231, 76, 60, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#e74c3c; font-size:17px; font-weight:600; margin-bottom:10px;">⏸️ Controla el flujo del bucle</h3>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #e74c3c; box-shadow:0 2px 4px rgba(231, 76, 60, 0.1);">
+<h4 style="margin-top:0; color:#e74c3c; font-size:13px; font-weight:600; margin-bottom:8px;">Break: salir del bucle</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span> := <span style="color:#b5cea8;">1</span>; <span style="color:#4ec9b0;">i</span> &lt;= <span style="color:#b5cea8;">10</span>; <span style="color:#4ec9b0;">i</span>++ {
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#4ec9b0;">i</span>)
+    <span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">i</span> == <span style="color:#b5cea8;">5</span> {
+        <span style="color:#569cd6;">break</span>  <span style="color:#808080;">// Sale del bucle</span>
+    }
+}
+<span style="color:#808080;">// Imprime: 1, 2, 3, 4, 5</span></code></pre>
+</div>
+</div>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #e74c3c; box-shadow:0 2px 4px rgba(231, 76, 60, 0.1);">
+<h4 style="margin-top:0; color:#e74c3c; font-size:13px; font-weight:600; margin-bottom:8px;">Continue: saltar iteración</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span> := <span style="color:#b5cea8;">1</span>; <span style="color:#4ec9b0;">i</span> &lt;= <span style="color:#b5cea8;">10</span>; <span style="color:#4ec9b0;">i</span>++ {
+    <span style="color:#569cd6;">if</span> <span style="color:#4ec9b0;">i</span>%<span style="color:#b5cea8;">2</span> == <span style="color:#b5cea8;">0</span> {
+        <span style="color:#569cd6;">continue</span>  <span style="color:#808080;">// Salta pares</span>
+    }
+    <span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Print</span>(<span style="color:#4ec9b0;">i</span>, <span style="color:#ce9178;">" "</span>)
+}
+<span style="color:#808080;">// Imprime: 1 3 5 7 9</span></code></pre>
+</div>
+</div>
+
+</div>
+
+<div style="background:#e8f5e9; padding:8px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:8px;">
+<p style="margin:0 0 4px 0; font-size:11px; color:#2e7d32; font-weight:600;">💡 Diferencia:</p>
+<ul style="margin:0; padding-left:18px; font-size:10px; color:#2d3436; line-height:1.5;">
+  <li><strong>break</strong>: termina el bucle completamente</li>
+  <li><strong>continue</strong>: salta el resto de la iteración actual y continúa con la siguiente</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<!-- Nota para el presentador:
+Explica la diferencia entre break y continue con ejemplos prácticos. Enfatiza cuándo usar cada uno. -->
+---
+
+## 3.3.3 Mejores prácticas con bucles for
+
+<div style="position:relative; margin-top:10px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #16a085 0%, #27ae60 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(22, 160, 133, 0.3);">
+Capítulo 3 • Slide 3.3.3
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #16a085; box-shadow:0 2px 8px rgba(22, 160, 133, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#16a085; font-size:17px; font-weight:600; margin-bottom:10px;">✅ Consejos para escribir bucles claros</h3>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #16a085; box-shadow:0 2px 4px rgba(22, 160, 133, 0.1);">
+<h4 style="margin-top:0; color:#16a085; font-size:13px; font-weight:600; margin-bottom:8px;">✅ Nombres descriptivos</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#808080;">// ✅ Mejor</span>
+<span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">contador</span> := <span style="color:#b5cea8;">0</span>; <span style="color:#4ec9b0;">contador</span> &lt; <span style="color:#b5cea8;">10</span>; <span style="color:#4ec9b0;">contador</span>++ {
+    <span style="color:#808080;">// ...</span>
+}
+
+<span style="color:#808080;">// ❌ Evitar</span>
+<span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">x</span> := <span style="color:#b5cea8;">0</span>; <span style="color:#4ec9b0;">x</span> &lt; <span style="color:#b5cea8;">10</span>; <span style="color:#4ec9b0;">x</span>++ {
+    <span style="color:#808080;">// ...</span>
+}</code></pre>
+</div>
+</div>
+
+<div style="background:#fff; padding:12px; border-radius:8px; border:2px solid #16a085; box-shadow:0 2px 4px rgba(22, 160, 133, 0.1);">
+<h4 style="margin-top:0; color:#16a085; font-size:13px; font-weight:600; margin-bottom:8px;">✅ Condiciones claras</h4>
+<div style="background:#1e1e1e; padding:10px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:10px; line-height:1.4; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#808080;">// ✅ Mejor</span>
+<span style="color:#4ec9b0;">maximo</span> := <span style="color:#b5cea8;">100</span>
+<span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span> := <span style="color:#b5cea8;">0</span>; <span style="color:#4ec9b0;">i</span> &lt; <span style="color:#4ec9b0;">maximo</span>; <span style="color:#4ec9b0;">i</span>++ {
+    <span style="color:#808080;">// ...</span>
+}
+
+<span style="color:#808080;">// ❌ Evitar números mágicos</span>
+<span style="color:#569cd6;">for</span> <span style="color:#4ec9b0;">i</span> := <span style="color:#b5cea8;">0</span>; <span style="color:#4ec9b0;">i</span> &lt; <span style="color:#b5cea8;">100</span>; <span style="color:#4ec9b0;">i</span>++ {
+    <span style="color:#808080;">// ¿Por qué 100?</span>
+}</code></pre>
+</div>
+</div>
+
+</div>
+
+<div style="background:#e8f5e9; padding:8px; border-radius:8px; border-left:4px solid #4caf50; margin-bottom:8px;">
+<p style="margin:0 0 4px 0; font-size:11px; color:#2e7d32; font-weight:600;">💡 Mejores prácticas:</p>
+<ul style="margin:0; padding-left:18px; font-size:10px; color:#2d3436; line-height:1.5;">
+  <li>Usa nombres descriptivos para variables de bucle</li>
+  <li>Evita números mágicos; usa constantes o variables</li>
+  <li>Mantén las condiciones de salida claras y simples</li>
+  <li>Usa break/continue con moderación para mantener legibilidad</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<!-- Nota para el presentador:
+Enfatiza buenas prácticas para escribir bucles claros y mantenibles. Menciona nombres descriptivos, evitar números mágicos, y mantener condiciones claras. -->
+---
+
+## 3.3.4 Reto: Shadowing de variables
+
+<div style="position:relative; margin-top:10px;">
+<div style="position:absolute; top:-15px; right:0; background:linear-gradient(135deg, #e67e22 0%, #d35400 100%); color:#fff; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:600; box-shadow:0 4px 12px rgba(230, 126, 34, 0.3);">
+Capítulo 3 • Slide 3.3.4
+</div>
+
+<div style="background:#f8f9fa; padding:14px; border-radius:12px; border-left:5px solid #e67e22; box-shadow:0 2px 8px rgba(230, 126, 34, 0.15); margin-top:10px;">
+
+<h3 style="margin-top:0; color:#e67e22; font-size:17px; font-weight:600; margin-bottom:10px;">🧩 Reto: ¿Qué imprime este código?</h3>
+
+<div style="background:#fff; padding:14px; border-radius:8px; border:2px solid #e67e22; box-shadow:0 2px 4px rgba(230, 126, 34, 0.1); margin-bottom:12px;">
+<div style="background:#1e1e1e; padding:12px; border-radius:6px; border:1px solid #333;">
+<pre style="margin:0; font-size:11px; line-height:1.5; color:#d4d4d4; font-family:'Monaco', monospace;"><code><span style="color:#4ec9b0;">a</span> := <span style="color:#b5cea8;">0</span>
+<span style="color:#4ec9b0;">b</span> := <span style="color:#b5cea8;">0</span>
+
+<span style="color:#569cd6;">if</span> <span style="color:#569cd6;">true</span> {
+    <span style="color:#4ec9b0;">a</span> := <span style="color:#b5cea8;">1</span>
+    <span style="color:#4ec9b0;">b</span> = <span style="color:#b5cea8;">1</span>
+    <span style="color:#4ec9b0;">a</span>++
+    <span style="color:#4ec9b0;">b</span>++
+}
+
+<span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#ce9178;">"a: "</span>, <span style="color:#4ec9b0;">a</span>)
+<span style="color:#4ec9b0;">fmt</span>.<span style="color:#dcdcaa;">Println</span>(<span style="color:#ce9178;">"b: "</span>, <span style="color:#4ec9b0;">b</span>)</code></pre>
+</div>
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+
+<div style="background:#fff3cd; padding:12px; border-radius:8px; border:2px solid #ffc107; box-shadow:0 2px 4px rgba(255, 193, 7, 0.1);">
+<h4 style="margin-top:0; color:#856404; font-size:13px; font-weight:600; margin-bottom:8px;">⚠️ Shadowing (Ocultación)</h4>
+<p style="margin:0; font-size:11px; color:#856404; line-height:1.4;">
+Cuando usas <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">:=</code> dentro de un bloque, <strong>creas una nueva variable</strong> que oculta la variable externa con el mismo nombre.
+</p>
+</div>
+
+<div style="background:#e8f5e9; padding:12px; border-radius:8px; border:2px solid #4caf50; box-shadow:0 2px 4px rgba(76, 175, 80, 0.1);">
+<h4 style="margin-top:0; color:#2e7d32; font-size:13px; font-weight:600; margin-bottom:8px;">✅ Asignación</h4>
+<p style="margin:0; font-size:11px; color:#2e7d32; line-height:1.4;">
+Cuando usas <code style="background:#fff; padding:1px 3px; border-radius:2px; font-size:9px;">=</code>, <strong>modificas</strong> la variable del scope externo (si existe).
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Nota para el presentador:
+Este reto enseña el concepto de shadowing (ocultación) de variables en Go. Es importante entender la diferencia entre `:=` (declaración) y `=` (asignación) y cómo afecta el scope de las variables. -->
